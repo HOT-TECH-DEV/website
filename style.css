@@ -5,7 +5,7 @@ box-sizing: border-box;
 }
 
 body{
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     display: flex;
     background-color: #ffffff;
@@ -14,15 +14,22 @@ body{
     /* align-items: center; */
 }
 .main-container{
+    overflow: hidden;
     padding: 0px 100px;
     align-items: center;
+}
+@media(max-width:768px){
+    .main-container{
+        padding: 0px 1rem;
+        align-items: start;
+    }   
 }
 .navigation-bar{
     justify-content: space-between;
     display: flex;
     width: 100%;
     padding: 3rem .1rem;
-    gap: 30rem;
+    /* gap: 30rem; */
     /* background-color: blue; */
 }
 .logo{
@@ -30,11 +37,29 @@ body{
     font-weight: bold;
 }
 
-ul a{
-    /* display: flex; */
-    padding: 1rem;
+ul {
+    display: flex;
+    gap: 1rem;
     text-decoration: none;
     Font-size: 16px
+}
+@media(max-width:768px){
+    .top-links {
+        display: none;
+    
+    }   
+}
+ul a{
+      text-decoration: none;
+    Font-size: 16px
+}
+.more{
+    display: none;
+}
+@media(max-width:768px){
+    .more{
+        display: flex;
+    }
 }
 a{
     color: #80777d;
@@ -51,11 +76,34 @@ a{
     display: flex;
     border-radius: 15px;
 }
+@media(max-width:768px){
+    .heros-sec{
+        /* padding: 4rem 6rem;  */
+        height: auto;
+        background-color:#e6eaee;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+                margin: 0 auto;
+        display: flex;
+        border-radius: 15px;
+    }    
+}
 .heros-main-message{
     font-size: 65px;
     word-spacing: 10px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+}
+@media(max-width:768px){
+    .heros-main-message{
+        font-size: 30px;
+        word-spacing: 10px;
+        font-weight: bold;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 }
 .ui{
     font-family: Arial, Helvetica, sans-serif;
@@ -67,6 +115,20 @@ a{
     width: rem;
     background-color: #f5f5f5;
     justify-content: center;
+}
+@media(max-width:768px){
+    .ui{
+        font-family: Arial, Helvetica, sans-serif;
+        
+        text-align: center;
+        display: flex; 
+        padding: 20px;
+        gap: 15px;
+        margin: 1rem 70px;
+        width: rem;
+        background-color: #f5f5f5;
+        justify-content: center;
+    }  
 }
 .dot{
     width: 8px;
@@ -80,7 +142,7 @@ a{
 .card1{
     display: inline;
     margin-top: 50px;
-    height: 39rem;
+    /* height: 39rem; */
     width: 25rem;
     padding:  3rem;
     /* background-color: #80777d; */
@@ -88,6 +150,14 @@ a{
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+}
+@media(max-width:768px){
+    .card1{
+        width: 100%;
+    }
+    .card1 img{
+        width: 100%;
+    }
 }
 .card1 img{
     border-radius: 15px;
@@ -167,16 +237,44 @@ a{
     display: flex;
     /* flex-direction: column; */
 }
+@media(max-width:768px){
+    .card-container{
+        display: flex;
+        flex-direction: column;
+    }   
+}
 .services{
     display: flex;
     gap: 10rem;
     margin-top: 50px;
     margin-left: 25px;
-
+}
+@media(max-width:360px){
+    .services{
+        flex-direction: column;
+       align-items: center;
+    }
 }
 .services ul{
     list-style: none;
     line-height: 35px;
+}
+.services-ul{
+    display: flex;
+}
+.service-ul-2{
+    display: flex;
+}
+@media(max-width:768px) {
+    .service-ul-2{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:768px){
+    .service-ul{
+        flex-direction: column;
+    }
 }
 .services-section{
     margin-top: 100px;
@@ -185,6 +283,13 @@ a{
     gap: 1rem;
     text-align: center;
 }
+@media(max-width:768px){
+    .services-section{
+        margin-top: 20px;
+    }
+   
+}
+
 .services-section p{
     color: #80777d;
     font-size: 20px;
@@ -201,6 +306,13 @@ a{
     border: 1px solid rgba(128, 128, 128, 0.514);
     border-radius: 10px;
 }
+@media(max-width:768px){
+    .quality-services-card{
+    /* padding: 2rem; */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}}
 .quality-services-card i{
     font-size: 60px;
 }
@@ -209,10 +321,23 @@ a{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    /* background-color: #2efc05; */
 }
 .quality-cards{
     margin-top: 3rem;
     display: flex;
     /* flex-wrap: wrap; */
-    gap: 40px;
+    gap: 90px;
 }
+@media(max-width:768px){
+    .quality-cards{
+        display: flex;
+      
+        flex-direction: column;
+       gap: .5rem;
+    }   
+    .who-iam p{
+        font-size: 20px;
+    }
+}
+
