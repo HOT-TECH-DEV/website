@@ -14,7 +14,7 @@ body{
     /* align-items: center; */
 }
 .main-container{
-    overflow: hidden;
+    overflow-x: hidden;
     padding: 0px 100px;
     align-items: center;
 }
